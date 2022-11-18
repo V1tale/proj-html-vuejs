@@ -8,7 +8,19 @@ export default {
               title: "Online Marketing",
               description: "it is a long established fact that a reader will be distracted",
               list: ["SEO", "SEM", "Website Strategy", "Social Management"]
-            }
+            },
+            tricks: [
+              {
+                img: "/img/510.png",
+                title: "Reporting Analysis",
+                description: "Everybody's workin' for the weekend. Everybody wants a new romance"
+              },
+              {
+                img: "/img/511.png",
+                title: "Technical SEO Adult",
+                description: "Everybody's going off the deep end. Everybody needs a second chance"
+              }
+            ]
         }
     }
 }
@@ -73,8 +85,20 @@ export default {
         </div>
       </div>
       <div class=" tricks row">
-        <div class="col-6"></div>
-        <div class="col-6"></div>
+        <div class="col-6">
+          <h3>Get tips tricks on how to skyrocket your sales</h3>
+          <p class="text-secondary">Enjoy the world and everything within it</p>
+          <div v-for="cards in tricks" class="s-cards d-flex align-items-start">
+            <img :src="cards.img" alt="">
+            <div class="card-description">
+              <h4>{{cards.title}}</h4>
+              <p class="text-secondary">{{cards.description}}</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-6">
+          <img :src="'/img/509.jpeg'" alt="">
+        </div>
       </div>
     </div>
   </section>
@@ -98,9 +122,6 @@ export default {
     height:350px;
     border-radius: 10px;
   }
-  .box img {
-      width:70px;
-    }
     ul {
       padding:0;
       font-size: 1rem;
@@ -109,8 +130,30 @@ export default {
       }
     }
   .tricks .col-6 {
-    height: 250px; 
-    border: 2px solid green;
+    img {
+      width:100%;
+    }
+    .s-cards {
+      margin: 1.6rem 0;
+      &:hover {
+        transform: scale(1.1);
+        box-shadow: 1px 1px 10px black;
+        h4 {
+          color: rgb(93, 93, 247);
+        }
+      }
+    img {
+      width:50px;
+
+    }
+  }
+
+    .card-description {
+      margin-left:10px;
+      p {
+        font-size: .8rem;
+      }
+    }
   }
   .benefit {
     margin: 3rem;
