@@ -1,5 +1,6 @@
 <script>
 import AppHome from "./AppHome.vue"
+import AppFeatures from "./AppFeatures.vue"
 export default {
   name: "AppMain",
     data() {
@@ -9,36 +10,14 @@ export default {
     },
   components: {
     AppHome,
+    AppFeatures,
   }
 }
 </script>
 
 <template>
  <AppHome />
-  <!-- APP FEATURES -->
-  <section id="features">
-<div class="container">
-  <div class="top d-flex justify-content-between">
-    <div class="title">
-
-    </div>
-    <div class="button">
-
-    </div>
-  </div>
-  <div class="row grid wrap g-4">
-    <div class="col-3"><div class="box"></div></div>
-    <div class="col-3"><div class="box"></div></div>
-    <div class="col-3"><div class="box"></div></div>
-    <div class="col-3"><div class="box"></div></div>
-    <div class="col-3"><div class="box"></div></div>
-    <div class="col-3"><div class="box"></div></div>
-    <div class="col-3"><div class="box"></div></div>
-    <div class="col-3"><div class="box"></div></div>
-  </div>
-</div>
-  </section>
-  <!-- /APP FEATURES -->
+  <AppFeatures />
   <!-- APP TESTIMONIALS -->
   <section id="testimonials">
     <div class="container">
@@ -71,22 +50,7 @@ export default {
 
 <style lang="scss">
 
-#features {
-  & .title {
-    width:50%;
-    height: 80px;
-    background-color: red;
-  }
-  & .button {
-    width:50%;
-    height: 80px;
-    background-color: orange;
-  }
-  .grid .box {
-    height: 100px;
-    background-color: yellow;
-  }
-}
+
 #testimonials {
   .col-6 {
     height: 150px;
