@@ -5,9 +5,15 @@ li {
     list-style-type: none;
 
 }
-:root {
-    --main-background:#f2f7ff;
+body .btn-primary:hover {
+    background-color: var(--hover-btn);
+    border: 1px solid white;
 }
+:root {
+    --header-height: 70px;
+    --main-color: #3177f7;
+    --main-background: #f2f7ff;
+  }
 img {
     width:100%;
 }
@@ -18,3 +24,4 @@ img {
       margin-right: 10px;
     }
     }
+

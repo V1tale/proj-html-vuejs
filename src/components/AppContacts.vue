@@ -85,6 +85,7 @@ export default {
 
 <style lang="scss">
  #contacts {
+  scroll-margin:var(--header-height);
     .title {
         text-align: center;
         padding: 2rem 0;

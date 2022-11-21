@@ -106,12 +106,13 @@ export default {
 
 <style lang="scss">
 #home {
-    & .text {
-    }
+  scroll-margin:var(--header-height);
+  padding: var(--header-height);
     & .picture {
       height:250px;
       img {
         width:100%;
+        max-height: 370px;
     }
 
   }
@@ -120,6 +121,7 @@ export default {
     padding: 20px;
     height:350px;
     border-radius: 10px;
+    margin-bottom:4rem;
   }
     ul {
       padding:0;

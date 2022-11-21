@@ -66,6 +66,7 @@ export default {
 
 <style lang="scss">
 #features {
+    scroll-margin:var(--header-height);
     background-image: url("/img/14.png");
     background-repeat: no-repeat;
     background-size: 350px;

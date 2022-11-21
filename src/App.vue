@@ -25,4 +25,11 @@ export default {
   <AppFooter />
 </template>
 
-<style lang="scss"></style>
+<style lang="scss">
+:root {
+  --header-height: 70px;
+  --main-color: #3177f7;
+  --main-background: #f2f7ff;
+  --hover-btn: rgb(41, 41, 41);
+}
+</style>

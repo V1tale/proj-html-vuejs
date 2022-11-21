@@ -99,6 +99,7 @@ export default {
 <style lang="scss">
 #footer {
   padding:2rem;
+  scroll-margin:var(--header-height);
   .col-3 {
     ul {
       padding:0;

@@ -82,8 +82,7 @@ export default {
 
 <style lang="scss">
 #testimonials {
-
-
+    scroll-margin:var(--header-height);
     background: linear-gradient(#cfebf8 0, white 40%,);
     .bg-wave {
         background-image: url("/img/15.png");
