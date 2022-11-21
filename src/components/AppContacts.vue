@@ -25,7 +25,7 @@ export default {
             
           ],
           name: "",
-           email: "",
+          email: "",
           subject: "",
           message: "",
         }       
@@ -33,7 +33,6 @@ export default {
       methods: {
         getInfo() {
           this-store.messages.push({name:this.name, email:this.email, subject:this.subject, message:this.message,});
-          this.name = "";
         }
     }
 }
@@ -87,8 +86,8 @@ export default {
                 <label for="floatingTextarea">Your message</label>
                 <button @click="getInfo()" type="button" class="btn btn-primary">Send Message</button>
                 <!-- DEBUG -->
-                <h1>{{store.messages}}</h1>
-                <h1>{{store.messages.length}}</h1>
+                <!-- <h1>{{store.messages}}</h1>
+                <h1>{{store.messages.length}}</h1> -->
               </div>
             </div>
           </div>

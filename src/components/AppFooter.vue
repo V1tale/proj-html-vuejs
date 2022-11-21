@@ -4,7 +4,83 @@ export default {
   name: "AppFooter",
     data() {
       return {
-        
+        footerMenu: [
+          {
+            title: "Menu",
+            content: [ 
+              {
+                item:"About Us",
+               links: "Link-A",
+              },
+              { 
+                item:"Theme",
+                links:"Link-B",
+              },
+              {
+                item: "Features",
+                links: "link-C"
+              },
+              {
+                item: "Pricing",
+                links: "link-D"
+              },
+              {
+                item: "Blog",
+                links: "link-E"
+              },
+            ]
+          },
+          {
+            title: "About Us",
+            content: [ 
+              {
+                item:"About Sofbox",
+               links: "Link-F",
+              },
+              { 
+                item:"RoadMap",
+                links:"Link-G",
+              },
+              {
+                item: "How it works",
+                links: "link-H"
+              },
+              {
+                item: "Team",
+                links: "link-I"
+              },
+              {
+                item: "News",
+                links: "link-J"
+              },
+            ]
+          },
+          {
+            title: "Menu",
+            content: [ 
+              {
+                item:"About Us",
+               links: "Link-A",
+              },
+              { 
+                item:"Theme",
+                links:"Link-B",
+              },
+              {
+                item: "Features",
+                links: "link-C"
+              },
+              {
+                item: "Pricing",
+                links: "link-D"
+              },
+              {
+                item: "Blog",
+                links: "link-E"
+              },
+            ]
+          },
+        ] 
       }
     }
 
@@ -25,68 +101,12 @@ export default {
             <span class="text-secondary">Copyright @ 2018 <a href="a-link">Sofbox</a></span>
           </div>
         </div>
-        <div class="col-3">
+        <div v-for="footerList in footerMenu" class="col-3">
           <div class="box">
-            <h4>Menu</h4>
+            <h4>{{footerList.title}}</h4>
             <ul>
-              <li>
-                <a href="">About-us</a>
-              </li>
-              <li>
-                <a href="">Theme</a>
-              </li>
-              <li>
-                <a href="">Features</a>
-              </li>
-              <li>
-                <a href="">Pricing</a>
-              </li>
-              <li>
-                <a href="">Blog</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-3">
-          <div class="box">
-            <h4>Menu</h4>
-            <ul>
-              <li>
-                <a href="">About-us</a>
-              </li>
-              <li>
-                <a href="">Theme</a>
-              </li>
-              <li>
-                <a href="">Features</a>
-              </li>
-              <li>
-                <a href="">Pricing</a>
-              </li>
-              <li>
-                <a href="">Blog</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-3">
-          <div class="box">
-            <h4>Menu</h4>
-            <ul>
-              <li>
-                <a href="">About-us</a>
-              </li>
-              <li>
-                <a href="">Theme</a>
-              </li>
-              <li>
-                <a href="">Features</a>
-              </li>
-              <li>
-                <a href="">Pricing</a>
-              </li>
-              <li>
-                <a href="">Blog</a>
+              <li v-for="footerContent in footerList.content">
+                <a :href="footerContent.links">{{footerContent.item}}</a>
               </li>
             </ul>
           </div>
@@ -100,12 +120,19 @@ export default {
 #footer {
   padding:2rem;
   scroll-margin:var(--header-height);
+  .logo h3 {
+    color: var(--main-color)
+  }
   .col-3 {
     ul {
       padding:0;
       a {
         color: gray;
         text-decoration: none;
+        line-height: 2rem;
+        &:hover {
+          color: var(--main-color);
+        }
       }
     }
   }
