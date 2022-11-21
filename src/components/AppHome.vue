@@ -138,7 +138,7 @@ export default {
       margin: 1.6rem 0;
       &:hover {
         transform: scale(1.1);
-        box-shadow: 1px 1px 10px black;
+        box-shadow: 1px 15px 20px gray;
         h4 {
           color: var(--main-color);
         }

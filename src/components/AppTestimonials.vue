@@ -30,7 +30,7 @@ export default {
                     <h2>Our Testimonials</h2>
                     <p class="text-secondary"> Meet our testimonials to ge to know how much exiting this experience can be</p>
                 </div>
-                <div class="row g-4">
+                <div class="staff row g-2">
                     <div v-for="person in testimonials" class="col-6">
                         <div class="box">
                             <img class="rounded-circle" :src="person.img" alt=""><br>
@@ -96,7 +96,6 @@ export default {
         position:relative;
         top:0;
         left:0;
-        cursor:pointer;
     
     &:nth-child(odd)::after {
         content:"";
@@ -117,12 +116,9 @@ export default {
         position:absolute;
         bottom:-10px;
         left:2.5px;
-        &:hover {
-            
-        }
     }
     &:hover::after {
-        background-color: rgb(93, 93, 247)
+        background-color: var(--main-color);
     }
     * {
         margin: .5rem 0;
@@ -130,13 +126,31 @@ export default {
     img {
         width:80px;
     }
+
     .box {
+
         text-align: center;
         padding: 1rem;
         height: 200px;
         background-color: white;
         box-shadow: 1px 1px 5px gray;
         border-radius: 10px;
+        max-width:800px;
+        &::before {
+        content:"";
+        background-image: url("img/86.svg");
+        background-repeat: no-repeat;
+        background-size: 100%;
+        position:absolute;
+        width: 100px;
+        height:100px;
+        top:50%;
+        left:50%;
+        opacity:20%;
+        transform: scaleX(-1);
+        transform: translate(-50%);
+        z-index: 2;
+        }
     }
   }
   .details {
@@ -161,4 +175,7 @@ export default {
     text-align: center;
     padding: 2rem 0;
   }
+  .staff {
+        cursor: pointer;
+    }
 }</style>
