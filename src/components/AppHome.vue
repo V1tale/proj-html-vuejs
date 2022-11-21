@@ -127,7 +127,7 @@ export default {
       padding:0;
       font-size: 1rem;
       i {
-        color:rgb(93, 93, 247)
+        color:var(--main-color)
       }
     }
   .tricks .col-6 {
@@ -140,7 +140,7 @@ export default {
         transform: scale(1.1);
         box-shadow: 1px 1px 10px black;
         h4 {
-          color: rgb(93, 93, 247);
+          color: var(--main-color);
         }
       }
     img {

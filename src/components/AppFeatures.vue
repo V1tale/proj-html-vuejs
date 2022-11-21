@@ -75,11 +75,6 @@ export default {
     padding-right: 2rem;
     margin: 2rem 0;
   }
-  & .button {
-    width:50%;
-    height: 80px;
-    background-color: orange;
-  }
   .grid  {
     margin:2rem;
     .box:hover:nth-child(3n +1) {
@@ -93,8 +88,8 @@ export default {
   .box {
     box-shadow: 1px 1px 20px gray;
     padding: 15px 15px 40px 15px;
-    border-radius: 5px;
-    
+    border-radius: 5px;   
+    background-color: white;
     img {
         width:50px;
         margin-top: 20px;

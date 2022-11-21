@@ -1,9 +1,5 @@
 <script>
 import {store} from "../store"
-import AppHome from "./AppHome.vue"
-import AppFeatures from "./AppFeatures.vue"
-import AppTestimonials from "./AppTestimonials.vue"
-import AppContacts from "./AppContacts.vue"
 export default {
   name: "AppHeader",
     data() {
@@ -11,12 +7,6 @@ export default {
         store
       }
     },
-    components: {
-    AppHome,
-    AppFeatures,
-    AppTestimonials,
-    AppContacts,
-  }
 
 }
 </script>
@@ -32,7 +22,7 @@ export default {
           <ul class="d-flex align-items-center">
             <li><a href="#home">Home</a></li>
             <li><a href="#footer">About-Us</a></li>
-            <li><a href="#features">Feature</a></li>
+            <li><a href="#features">Features</a></li>
             <li><a href="#testimonials">Testimonials</a></li>
             <li><a href="#contacts">Contact Us</a></li>
           </ul>
