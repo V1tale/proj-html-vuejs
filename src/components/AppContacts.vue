@@ -1,8 +1,10 @@
 <script>
+import {store} from "../store"
 export default {
     name:"AppContacts",
     data() {
         return {
+          store,
           social: [
             {
               icon: "fa-brands fa-facebook-f",
@@ -21,7 +23,17 @@ export default {
               link: "A-Link",
             }
             
-          ]
+          ],
+          name: "",
+           email: "",
+          subject: "",
+          message: "",
+        }       
+      },
+      methods: {
+        getInfo() {
+          this-store.messages.push({name:this.name, email:this.email, subject:this.subject, message:this.message,});
+          this.name = "";
         }
     }
 }
@@ -58,22 +70,25 @@ export default {
               <h3>Get In Touch</h3>
               <div class="name-email d-flex justify-content-between">
                 <div class="form-floating mb-3">
-                  <input type="text" class="form-control" id="name" placeholder="Your Name">
+                  <input v-model="name" type="text" class="form-control" id="name" placeholder="Your Name">
                   <label for="name">Your name</label>
                 </div>
                 <div class="form-floating mb-3">
-                  <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                  <input v-model="email" type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
                   <label for="floatingInput">Your Email</label>
                 </div>
               </div>
                 <div class="form-floating mb-3">
-                  <input type="text" class="form-control" id="subject" placeholder="Your subject">
+                  <input v-model="subject" type="text" class="form-control" id="subject" placeholder="Your subject">
                   <label for="subject">Your subject</label>
                 </div>
               <div class="form-floating">
-                <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
+                <textarea v-model="message" class="form-control" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
                 <label for="floatingTextarea">Your message</label>
-                <button type="button" class="btn btn-primary">Send Message</button>
+                <button @click="getInfo()" type="button" class="btn btn-primary">Send Message</button>
+                <!-- DEBUG -->
+                <h1>{{store.messages}}</h1>
+                <h1>{{store.messages.length}}</h1>
               </div>
             </div>
           </div>
