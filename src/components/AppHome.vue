@@ -105,7 +105,6 @@ export default {
 </template>
 
 <style lang="scss">
-@use "../partials/variables.scss";
 #home {
     & .text {
     }
