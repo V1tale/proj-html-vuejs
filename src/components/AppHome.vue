@@ -1,26 +1,10 @@
 <script>
+import {store} from "../store"
 export default {
     name:"AppHome",
     data() {
         return {
-          benefits: {
-              img: "/img/24.png",
-              title: "Online Marketing",
-              description: "it is a long established fact that a reader will be distracted",
-              list: ["SEO", "SEM", "Website Strategy", "Social Management"]
-            },
-            tricks: [
-              {
-                img: "/img/510.png",
-                title: "Reporting Analysis",
-                description: "Everybody's workin' for the weekend. Everybody wants a new romance"
-              },
-              {
-                img: "/img/511.png",
-                title: "Technical SEO Adult",
-                description: "Everybody's going off the deep end. Everybody needs a second chance"
-              }
-            ]
+          store,
         }
     }
 }
@@ -44,13 +28,13 @@ export default {
         <div class="col-4">
           <div class="box d-flex align-items-start">
             <div class="left ">
-              <img :src="benefits.img" alt="">
+              <img :src="store.benefits.img" alt="">
             </div>
             <div class="right">
-                <h3>{{benefits.title}}</h3>
-                <p class="text-secondary">{{benefits.description}}</p>
+                <h3>{{store.benefits.title}}</h3>
+                <p class="text-secondary">{{store.benefits.description}}</p>
                 <ul>
-                  <li v-for="item in benefits.list"><i class="fa-solid fa-check"></i> {{item}}</li>
+                  <li v-for="item in store.benefits.list"><i class="fa-solid fa-check"></i> {{item}}</li>
                 </ul>
             </div>
           </div>
@@ -58,13 +42,13 @@ export default {
         <div class="col-4">
           <div class="box d-flex align-items-start">
             <div class="left ">
-              <img :src="benefits.img" alt="">
+              <img :src="store.benefits.img" alt="">
             </div>
             <div class="right">
-                <h3>{{benefits.title}}</h3>
-                <p class="text-secondary">{{benefits.description}}</p>
+                <h3>{{store.benefits.title}}</h3>
+                <p class="text-secondary">{{store.benefits.description}}</p>
                 <ul>
-                  <li v-for="item in benefits.list"><i class="fa-solid fa-check"></i> {{item}}</li>
+                  <li v-for="item in store.benefits.list"><i class="fa-solid fa-check"></i> {{item}}</li>
                 </ul>
             </div>
           </div>
@@ -72,13 +56,13 @@ export default {
         <div class="col-4">
           <div class="box d-flex align-items-start">
             <div class="left ">
-              <img :src="benefits.img" alt="">
+              <img :src="store.benefits.img" alt="">
             </div>
             <div class="right">
-                <h3>{{benefits.title}}</h3>
-                <p class="text-secondary">{{benefits.description}}</p>
+                <h3>{{store.benefits.title}}</h3>
+                <p class="text-secondary">{{store.benefits.description}}</p>
                 <ul>
-                  <li v-for="item in benefits.list"><i class="fa-solid fa-check"></i> {{item}}</li>
+                  <li v-for="item in store.benefits.list"><i class="fa-solid fa-check"></i> {{item}}</li>
                 </ul>
             </div>
           </div>
@@ -88,7 +72,7 @@ export default {
         <div class="col-6">
           <h3>Get tips tricks on how to skyrocket your sales</h3>
           <p class="text-secondary">Enjoy the world and everything within it</p>
-          <div v-for="cards in tricks" class="s-cards d-flex align-items-start">
+          <div v-for="cards in store.tricks" class="s-cards d-flex align-items-start">
             <img :src="cards.img" alt="">
             <div class="card-description">
               <h4>{{cards.title}}</h4>
@@ -135,7 +119,7 @@ export default {
       width:100%;
     }
     .s-cards {
-      margin: 1.6rem 0;
+      margin: 3rem 0;
       &:hover {
         transform: scale(1.1);
         box-shadow: 1px 15px 20px gray;

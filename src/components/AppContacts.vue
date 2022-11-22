@@ -5,36 +5,9 @@ export default {
     data() {
         return {
           store,
-          social: [
-            {
-              icon: "fa-brands fa-facebook-f",
-              link: "A-Link",
-            },
-            {
-              icon: "fa-brands fa-twitter",
-              link: "A-Link",
-            },
-            {
-              icon: "fa-brands fa-github",
-              link: "A-Link",
-            },
-            {
-              icon: "fa-brands fa-instagram",
-              link: "A-Link",
-            }
-            
-          ],
-          name: "",
-          email: "",
-          subject: "",
-          message: "",
+          
         }       
       },
-      methods: {
-        getInfo() {
-          this-store.messages.push({name:this.name, email:this.email, subject:this.subject, message:this.message,});
-        }
-    }
 }
 </script>
 
@@ -60,7 +33,7 @@ export default {
               <h5 class="text-secondary">mail@sofbox.com</h5>
             </div>
             <div class="social d-flex">
-              <div v-for="social in social" class="social-icon">
+              <div v-for="social in store.social" class="social-icon">
                 <a :href="social.link"><i :class="social.icon"></i></a>
               </div>
 
@@ -69,22 +42,22 @@ export default {
               <h3>Get In Touch</h3>
               <div class="name-email d-flex justify-content-between">
                 <div class="form-floating mb-3">
-                  <input v-model="name" type="text" class="form-control" id="name" placeholder="Your Name">
+                  <input v-model="store.name" type="text" class="form-control" id="name" placeholder="Your Name">
                   <label for="name">Your name</label>
                 </div>
                 <div class="form-floating mb-3">
-                  <input v-model="email" type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                  <input v-model="store.email" type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
                   <label for="floatingInput">Your Email</label>
                 </div>
               </div>
                 <div class="form-floating mb-3">
-                  <input v-model="subject" type="text" class="form-control" id="subject" placeholder="Your subject">
+                  <input v-model="store.subject" type="text" class="form-control" id="subject" placeholder="Your subject">
                   <label for="subject">Your subject</label>
                 </div>
               <div class="form-floating">
-                <textarea v-model="message" class="form-control" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
+                <textarea v-model="store.message" class="form-control" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
                 <label for="floatingTextarea">Your message</label>
-                <button @click="getInfo()" type="button" class="btn btn-primary">Send Message</button>
+                <button @click="$emit('getData')" type="button" class="btn btn-primary">Send Message</button>
                 <!-- DEBUG -->
                 <!-- <h1>{{store.messages}}</h1>
                 <h1>{{store.messages.length}}</h1> -->
@@ -129,11 +102,24 @@ export default {
         text-align: center;
         font-size: 1.4rem;
         line-height: 25px;
+        color: var(--main-color);
+        &:hover {
+          color:white;
+          background-color: var(--main-color);
+        }
+        & a {
+          color:inherit;
+        }
       }
       .form {
         margin-top: 2rem;
         button {
           margin-top: 1rem;
+        }
+        textarea  {
+          height: 200px;
+          resize: none;
+
         }
       }
     }

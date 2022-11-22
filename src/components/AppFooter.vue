@@ -1,86 +1,10 @@
 <script>
-
+import {store} from "../store"
 export default {
   name: "AppFooter",
     data() {
       return {
-        footerMenu: [
-          {
-            title: "Menu",
-            content: [ 
-              {
-                item:"About Us",
-               links: "Link-A",
-              },
-              { 
-                item:"Theme",
-                links:"Link-B",
-              },
-              {
-                item: "Features",
-                links: "link-C"
-              },
-              {
-                item: "Pricing",
-                links: "link-D"
-              },
-              {
-                item: "Blog",
-                links: "link-E"
-              },
-            ]
-          },
-          {
-            title: "About Us",
-            content: [ 
-              {
-                item:"About Sofbox",
-               links: "Link-F",
-              },
-              { 
-                item:"RoadMap",
-                links:"Link-G",
-              },
-              {
-                item: "How it works",
-                links: "link-H"
-              },
-              {
-                item: "Team",
-                links: "link-I"
-              },
-              {
-                item: "News",
-                links: "link-J"
-              },
-            ]
-          },
-          {
-            title: "Menu",
-            content: [ 
-              {
-                item:"About Us",
-               links: "Link-A",
-              },
-              { 
-                item:"Theme",
-                links:"Link-B",
-              },
-              {
-                item: "Features",
-                links: "link-C"
-              },
-              {
-                item: "Pricing",
-                links: "link-D"
-              },
-              {
-                item: "Blog",
-                links: "link-E"
-              },
-            ]
-          },
-        ] 
+      store,
       }
     }
 
@@ -101,7 +25,7 @@ export default {
             <span class="text-secondary">Copyright @ 2018 <a href="a-link">Sofbox</a></span>
           </div>
         </div>
-        <div v-for="footerList in footerMenu" class="col-3">
+        <div v-for="footerList in store.footerMenu" class="col-3">
           <div class="box">
             <h4>{{footerList.title}}</h4>
             <ul>

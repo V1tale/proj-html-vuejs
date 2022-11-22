@@ -1,42 +1,11 @@
 <script>
+import {store} from "../store"
 export default {
     name:"AppFeatures",
     data() {
         return {
-            features: [
-                {
-                    img: "/img/342.png",
-                    title: "Customized Invoices",
-                },
-                {
-                    img: "/img/234.png",
-                    title: "Stock Management",
-                },
-                {
-                    img: "/img/86.png",
-                    title: "Receivable & Payable",
-                },
-                {
-                    img: "/img/877.png",
-                    title: "Manage Buying",
-                },
-                {
-                    img: "/img/476.png",
-                    title: "Powerful & Secure",
-                },
-                {
-                    img: "/img/86.png",
-                    title: "Fastest Return Filing",
-                },
-                {
-                    img: "/img/474.png",
-                    title: "Monthly Detailed",
-                },
-                {
-                    img: "/img/367.png",
-                    title: "Product Management",
-                }
-            ]
+            store,
+            
         }
     }
 }
@@ -53,7 +22,7 @@ export default {
                 <button type="button" class="btn btn-primary">Explore more features</button>
             </div>
             <div class="row grid wrap g-4">
-                <div v-for="cards in features" class="col-3">
+                <div v-for="cards in store.features" class="col-3">
                     <div class="box">
                         <h3>{{cards.title}}</h3>
                         <img :src="cards.img" alt="">
