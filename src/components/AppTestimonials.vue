@@ -20,7 +20,7 @@ export default {
                     <p class="text-secondary"> Meet our testimonials to ge to know how much exiting this experience can be</p>
                 </div>
                 <div class="staff row g-2">
-                    <div v-for="person in store.testimonials" class="col-6">
+                    <div v-for="person in store.testimonials" class="col-12 col-md-6">
                         <div class="box">
                             <img class="rounded-circle" :src="person.img" alt=""><br>
                             <span>{{person.name}}</span><span class="text-secondary"> - {{person.role}}</span>
@@ -33,7 +33,7 @@ export default {
                 <p class="text-secondary">If you are planning on developing a product landing</p>
             </div>
             <div class="row details">
-                <div class="col-4">
+                <div class="col-12 col-md-4">
                     <div class="box">
                         <img :src="'/img/19.jpg'" alt="">
                         <h3>Life lack meaning</h3>
@@ -43,7 +43,7 @@ export default {
                         </div>
                     </div>
                 </div>
-                <div class="col-4">
+                <div class="col-12 col-md-4">
                     <div class="box">
                         <img :src="'/img/18.jpg'" alt="">
                         <h3>Life lack meaning</h3>
@@ -53,7 +53,7 @@ export default {
                         </div>
                     </div>
                 </div>
-                <div class="col-4">
+                <div class="col-12 col-md-4">
                     <div class="box">
                         <img :src="'/img/17.jpg'" alt="">
                         <h3>Life lack meaning</h3>
@@ -81,7 +81,7 @@ export default {
         text-align: center;
         padding: 3rem 0;
     }
-    .col-6 {
+    .col-md-6 {
         position:relative;
         top:0;
         left:0;

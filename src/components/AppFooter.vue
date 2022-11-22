@@ -15,7 +15,7 @@ export default {
   <section id="footer">
     <div class="container">
       <div class="row justify-content-between g-5">
-        <div class="col-3">
+        <div class="col-6 col-md-3">
           <div class="box">
             <div class="logo d-flex align-items-center">
               <img :src="'img/logo-2.png'" alt="">
@@ -25,7 +25,7 @@ export default {
             <span class="text-secondary">Copyright @ 2018 <a href="a-link">Sofbox</a></span>
           </div>
         </div>
-        <div v-for="footerList in store.footerMenu" class="col-3">
+        <div v-for="footerList in store.footerMenu" class="col-6 col-md-3">
           <div class="box">
             <h4>{{footerList.title}}</h4>
             <ul>
@@ -47,7 +47,7 @@ export default {
   .logo h3 {
     color: var(--main-color)
   }
-  .col-3 {
+  .col-md-3 {
     ul {
       padding:0;
       a {

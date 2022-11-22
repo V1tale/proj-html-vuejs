@@ -15,7 +15,7 @@ export default {
     <section id="home">
     <div class="container">
       <div class="row jumbo">
-        <div class="col-6 text">
+        <div class="col-12 col-md-6 text">
             <h2>The biggest platform for your growth</h2>
             <p class="text-secondary">There are many variations of passages of Lorem Ipsus available, but the majority have suffered alteration in some form</p>
             <button type="button" class="btn btn-primary">Read More</button>
@@ -25,7 +25,7 @@ export default {
         </div>
       </div>
       <div class="benefit row">
-        <div class="col-4">
+        <div class="col-12 col-md-4">
           <div class="box d-flex align-items-start">
             <div class="left ">
               <img :src="store.benefits.img" alt="">
@@ -39,7 +39,7 @@ export default {
             </div>
           </div>
         </div>
-        <div class="col-4">
+        <div class="col-12 col-md-4">
           <div class="box d-flex align-items-start">
             <div class="left ">
               <img :src="store.benefits.img" alt="">
@@ -53,7 +53,7 @@ export default {
             </div>
           </div>
         </div>
-        <div class="col-4">
+        <div class="col-12 col-md-4">
           <div class="box d-flex align-items-start">
             <div class="left ">
               <img :src="store.benefits.img" alt="">
@@ -69,7 +69,7 @@ export default {
         </div>
       </div>
       <div class=" tricks row">
-        <div class="col-6">
+        <div class="col-12 col-md-6">
           <h3>Get tips tricks on how to skyrocket your sales</h3>
           <p class="text-secondary">Enjoy the world and everything within it</p>
           <div v-for="cards in store.tricks" class="s-cards d-flex align-items-start">
@@ -80,7 +80,7 @@ export default {
             </div>
           </div>
         </div>
-        <div class="col-6">
+        <div class="col-12 col-md-6">
           <img :src="'/img/509.jpeg'" alt="">
         </div>
       </div>
@@ -114,7 +114,7 @@ export default {
         color:var(--main-color)
       }
     }
-  .tricks .col-6 {
+  .tricks .col-md-6 {
     img {
       width:100%;
     }

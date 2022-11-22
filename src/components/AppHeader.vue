@@ -15,7 +15,7 @@ export default {
   <header>
     <div class="container d-flex justify-content-between align-items-center">
       <div id="logo">
-        <img :src="'/img/logo-2.png'" alt="">
+        <a href="#home"><img :src="'/img/logo-2.png'" alt=""></a>
       </div>
       <div id="menu" class="d-flex justify-content-between align-items-center">
         <div class="list">
@@ -119,5 +119,9 @@ header {
         z-index:9;
         color:white;
       }
-
+  @media screen and (max-width:768px) {
+    .list {
+      display:none;
+    }
+  }
 </style>

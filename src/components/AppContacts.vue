@@ -19,12 +19,12 @@ export default {
         <p class="text-secondary">Get in touch with us to find out what's new in our amazing world</p>
       </div>
       <div class="row">
-        <div class="col-6">
+        <div class="col-12 col-md-6">
           <div class="box">
             <img :src="'/img/map.jpg'" alt="">
           </div>
         </div>
-        <div class="col-6">
+        <div class="col-12 col-md-6">
           <div class="box">
             <div class="top">
               <img :src="'img/35.png'" alt="">
@@ -81,7 +81,7 @@ export default {
       width: 100px;
       margin-bottom:2rem;
     }
-    .col-6 {
+    .col-md-6 {
 
       .box {
         padding: 10px;

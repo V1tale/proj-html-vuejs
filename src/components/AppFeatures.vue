@@ -22,7 +22,7 @@ export default {
                 <button type="button" class="btn btn-primary">Explore more features</button>
             </div>
             <div class="row grid wrap g-4">
-                <div v-for="cards in store.features" class="col-3">
+                <div v-for="cards in store.features" class="col-12 col-md-3">
                     <div class="box">
                         <h3>{{cards.title}}</h3>
                         <img :src="cards.img" alt="">
@@ -68,7 +68,7 @@ export default {
         font-size: 1rem;
     }
   }
-  .col-3 {
+  .col-md-3 {
       &:nth-child(3n +1) {
           img {
             filter:hue-rotate(10deg);
